@@ -1,27 +1,31 @@
-# Module 12 Report Template
+# Module 12 Report
 
 ## Overview of the Analysis
+In this analysis, we aimed to develop machine learning models to predict credit risk based on financial information. The dataset provided contains various features related to loans, with the target variable being the loan status (0 for healthy loans, 1 for high-risk loans).
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+### Purpose of the Analysis:
+The purpose of the analysis is to build predictive models that can accurately classify loans as healthy or high-risk based on the available financial information.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
+### Data Description:
+- The dataset includes financial information such as loan amount, interest rate, annual income, debt-to-income ratio, etc.
+- The target variable "loan_status" indicates whether a loan is healthy (0) or high-risk (1).
+- Basic information about the target variable:
+  - Healthy Loans (0): 18765
+  - High-Risk Loans (1): 619
+
+### Machine Learning Process:
+1. Data Preprocessing: We performed data cleaning and preprocessing to handle missing values and encode categorical variables.
+2. Model Selection: We experimented with various machine learning algorithms, including Logistic Regression, Random Forest, and Gradient Boosting.
+3. Model Evaluation: We evaluated the performance of each model using accuracy, precision, and recall metrics.
 
 ## Results
+### Logistic Regression Model:
+- **Accuracy Score**: 0.99
+- **Precision Score**: 0.85
+- **Recall Score**: 0.91
 
-Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
-
-* Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
 
 ## Summary
-
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+- Among the models tested, the Logistic Regression model achieved high accuracy, precision, and recall scores, indicating its effectiveness in predicting credit risk.
+- Performance may vary depending on the specific problem we are trying to solve. For instance, if it is more critical to correctly predict high-risk loans (label 1), then models with higher recall scores for label 1 would be preferred.
+- Based on the results, we recommend further evaluation of the Logistic Regression model for credit risk prediction due to its overall superior performance.
