@@ -1,30 +1,31 @@
-# Credit Risk Analysis Report
+# Module 12 Report
 
-## Overview
-This analysis aims to predict the credit risk of loans using a logistic regression model based on various loan attributes.
+## Overview of the Analysis
+In this analysis, we aimed to develop machine learning models to predict credit risk based on financial information. The dataset provided contains various features related to loans, with the target variable being the loan status (0 for healthy loans, 1 for high-risk loans).
 
-## Instructions
-### Split the Data into Training and Testing Sets
-1. Read the lending_data.csv data from the Resources folder into a Pandas DataFrame.
-2. Create the labels set (y) from the “loan_status” column and create the features (X) DataFrame from the remaining columns.
-3. Split the data into training and testing datasets by using train_test_split.
+### Purpose of the Analysis:
+The purpose of the analysis is to build predictive models that can accurately classify loans as healthy or high-risk based on the available financial information.
 
-### Create a Logistic Regression Model with the Original Data
-1. Fit a logistic regression model by using the training data (X_train and y_train).
-2. Save the predictions for the testing data labels by using the testing feature data (X_test) and the fitted model.
-3. Generate a confusion matrix.
-4. Print the classification report.
-5. Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
+### Data Description:
+- The dataset includes financial information such as loan amount, interest rate, annual income, debt-to-income ratio, etc.
+- The target variable "loan_status" indicates whether a loan is healthy (0) or high-risk (1).
+- Basic information about the target variable:
+  - Healthy Loans (0): 18765
+  - High-Risk Loans (1): 619
 
-### Write a Credit Risk Analysis Report
-1. Write a brief report that includes a summary and analysis of the performance of the machine learning models that you used in this homework.
-2. Structure your report by using the provided report template, ensuring that it contains an overview of the analysis, the results, and a summary.
-3. Include your justification for recommending the model for use by the company. If you don’t recommend the model, justify your reasoning.
+### Machine Learning Process:
+1. Data Preprocessing: We performed data cleaning and preprocessing to handle missing values and encode categorical variables.
+2. Model Selection: We experimented with various machine learning algorithms, including Logistic Regression, Random Forest, and Gradient Boosting.
+3. Model Evaluation: We evaluated the performance of each model using accuracy, precision, and recall metrics.
 
 ## Results
-- **Accuracy**: 0.99
-- **Precision**: 0.85
-- **Recall**: 0.91
+### Logistic Regression Model:
+- **Accuracy Score**: 0.99
+- **Precision Score**: 0.85
+- **Recall Score**: 0.91
+
 
 ## Summary
-The logistic regression model performs well in predicting credit risk. It achieves an accuracy of 0.99, indicating strong overall performance. The precision score of 0.85 for high-risk loans (label 1) suggests that among the loans predicted as high-risk, 85% are actually high-risk. The recall score of 0.91 indicates that the model correctly identifies 91% of the actual high-risk loans. Overall, these metrics demonstrate the model's effectiveness in identifying both healthy and high-risk loans. Based on these results, I recommend using this model for credit risk classification.
+- Among the models tested, the Logistic Regression model achieved high accuracy, precision, and recall scores, indicating its effectiveness in predicting credit risk.
+- Performance may vary depending on the specific problem we are trying to solve. For instance, if it is more critical to correctly predict high-risk loans (label 1), then models with higher recall scores for label 1 would be preferred.
+- Based on the results, we recommend further evaluation of the Logistic Regression model for credit risk prediction due to its overall superior performance.
